@@ -46,6 +46,13 @@ int validar_cadena()
 	printf("Ingrese una cadena para verificar (case-sensitive): ");
 	gets(cadena);
 
+	// NUEVA VALIDACION: verificar que la cadena no esté vacía
+	if (strlen(cadena) == 0)
+	{
+		printf("\nNo cumple: CADENA VACIA");
+		return 0;
+	}
+
 	// valida que todos los datos de la cadena esten contenidos en el alfabeto
 	if (validar_alfabeto(alfabeto, cadena, alfabeto_len) != 1)
 	{
